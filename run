@@ -1,0 +1,5 @@
+#!/bin/sh
+DIRT_DNS_ADDR=${DIRT_DNS_ADDR:-114.114.114.114}
+SAFE_DNS_ADDR=${SAFE_DNS_ADDR:-8.8.4.4}
+
+exec chinadns -b 0.0.0.0 -c /etc/chnroute.txt -p 5353 -s $DIRT_DNS_ADDR,$SAFE_DNS_ADDR -y 0.3
